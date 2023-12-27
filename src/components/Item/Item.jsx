@@ -6,10 +6,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
-
+import './item.css'
 export const Item = ({char}) => {
   const {productName, price, productImage, description } = char
-
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -20,22 +19,18 @@ export const Item = ({char}) => {
           alt="green iguana"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h5" color={'gray'} component="div">
             {productName}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {description}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {price}
+            Since ${price}
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-      </CardActions>
+
     </Card>
   );
 }

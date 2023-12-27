@@ -1,6 +1,10 @@
 *{
-    color:#fafafa
+    color:#fafafa;
+      margin: 0; 
+    
+    
 }
+
 .shopTitle {
     margin-top: 100px;
     text-align: center;

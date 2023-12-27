@@ -1,7 +1,7 @@
 import React from "react";
 import { PRODUCTS } from "../../Product";
 import "./ItemListContainer.css"
-import Item from "./Item/Item";
+import Item from "../../components/Item/Item";
 import {Link} from 'react-router-dom';
 export const ItemListContainer = () => {
     return <div className="shop">
@@ -12,11 +12,13 @@ export const ItemListContainer = () => {
             {" "}
             {PRODUCTS.map((product)=> {
                 return (
-                <div style={{margin:10}} key={product.id}>
-                    <Link>
-                        <Item char={product} />
-                    </Link>
-                </div>)
+                    <div className="product" key={product.id}>
+                        <Link to={`/item/${product.id}`}>
+                            <Item char={product} />
+                        </Link>
+                    <button className="addToCartBttn">Add To Cart</button></div>
+                
+                )
         })}</div>
     </div>
 }
