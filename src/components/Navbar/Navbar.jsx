@@ -1,6 +1,7 @@
 import { ShoppingCart } from "phosphor-react";
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import logo from '../../assets/Sys.png';
 import './Navbar.css'
 
 const categories = [
@@ -11,6 +12,7 @@ const categories = [
   ];
 export const Navbar = () => {
     return <div className="navbar">
+            <Link to="/"><img src={logo} alt="Logo" className="logo" /></Link>            
             <div className="links">
                 <Link to="/">BLOG</Link>
                 <Link to="/">ABOUT</Link>
