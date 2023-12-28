@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
 import { PRODUCTS } from "../../Product";
-import { categories } from "../Navbar/Navbar"; // Asegúrate de importar categories desde donde esté definido
+import { categories } from "../Navbar/Navbar";
 import "./ItemListContainer.css";
 
 const ItemListContainer = () => {
@@ -18,7 +18,6 @@ const ItemListContainer = () => {
         );
         setProductos(productosFiltrados);
 
-        // Busca el nombre de la categoría y guárdalo en el estado
         const categoriaEncontrada = categories.find(cat => cat.id == IDCATEGORIA);
         setCategoriaNombre(categoriaEncontrada ? categoriaEncontrada.name : '');
 
@@ -28,7 +27,7 @@ const ItemListContainer = () => {
 
     };
     fetchProductos();
-  }, [IDCATEGORIA]); 
+  }, [IDCATEGORIA]);
 
   return (
     <div className="shop">
