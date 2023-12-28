@@ -1,7 +1,7 @@
 import React from "react";
 import { PRODUCTS } from "../../Product";
 import "./ItemListContainer.css"
-import Item from "../../components/Item/Item";
+import Item from "../Item/Item";
 import {Link} from 'react-router-dom';
 export const ItemListContainer = () => {
     return <div className="shop">

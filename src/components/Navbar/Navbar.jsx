@@ -21,7 +21,7 @@ export const Navbar = () => {
                 <span>PRODUCTS</span>
                 <div className="categories-list">
                     {categories.map(category => (
-                        <Link key={category.id} to={`/items/${category.id}`} activeclassname="active">
+                        <Link key={category.id} to={`/item/${category.id}`} activeclassname="active">
                             {category.name}
                         </Link>
                     ))}

@@ -1,0 +1,23 @@
+.item-container{
+padding: 30px;    
+display: flex;
+flex-direction: column;
+justify-content: center !important;
+text-align: center;
+}
+
+.item-container img{
+    height: 400px;
+    width: 600;
+}
+.item-container h2{
+    font-size: 60px;
+    font-weight:900;
+}
+.item-container-son{
+    padding: 30px;
+}
+.item-container-son p{
+    margin: 30px;
+    font-size: 40px;
+}
