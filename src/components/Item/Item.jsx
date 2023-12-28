@@ -9,6 +9,7 @@ import './item.css';
 export const Item = ({ product }) => {
   const { productName, price, productImage, description } = product;
 
+
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
