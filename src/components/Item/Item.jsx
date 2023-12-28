@@ -1,22 +1,22 @@
-
-
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
-import './item.css'
-export const Item = ({char}) => {
-  const {productName, price, productImage, description } = char
+import './item.css';
+
+export const Item = ({ product }) => {
+  const { productName, price, productImage, description } = product;
+
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image= {productImage}
-          alt="green iguana"
+          image={productImage}
+          alt="Product Image"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" color={'gray'} component="div">
@@ -30,7 +30,6 @@ export const Item = ({char}) => {
           </Typography>
         </CardContent>
       </CardActionArea>
-
     </Card>
   );
 }

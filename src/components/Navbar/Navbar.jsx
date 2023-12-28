@@ -4,10 +4,9 @@ import logo from '../../assets/Sys.png';
 import './Navbar.css'
 import CartWidget from "../CartWidget/CartWidget";
 
-const categories = [
+export const categories = [
     { id: 1, name: 'Services on demand' },
-    { id: 2, name: 'Lading Pages' },
-    { id: 3, name: 'Social Media' },
+    { id: 2, name: 'Landing Pages' },
 
   ];
 export const Navbar = () => {
@@ -21,9 +20,13 @@ export const Navbar = () => {
                 <span>PRODUCTS</span>
                 <div className="categories-list">
                     {categories.map(category => (
-                        <Link key={category.id} to={`/item/${category.id}`} activeclassname="active">
-                            {category.name}
-                        </Link>
+          <Link
+            key={category.id}
+            to={`/category/${category.id}`}
+            activeclassname="active"
+          >
+            {category.name}
+          </Link>
                     ))}
                 </div>
                 </div>

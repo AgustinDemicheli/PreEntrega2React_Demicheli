@@ -1,9 +1,9 @@
 import React from "react";
-import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
+import ShopList from "../../components/ShopList/ShopList";
 
 export const Shop = () => {
     return <div>
-        <ItemListContainer/>
+        <ShopList/>
     </div>
 }
 
